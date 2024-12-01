@@ -10,14 +10,14 @@
 			<xs:sequence>
 				<xs:element name="message" type="xs:string"/>
 				<xs:element name="responseStatusdata" type="xs:string"/>
-				<xs:element ref="Response:data"/>
+				<xs:element ref="Response:data" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="data">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:any namespace="##any" processContents="lax"/>
+				<xs:any namespace="##any" processContents="lax" minOccurs="0"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

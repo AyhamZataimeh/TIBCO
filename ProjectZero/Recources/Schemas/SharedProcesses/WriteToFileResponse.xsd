@@ -3,7 +3,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	 xmlns:WriteToFileRequest="http://www.tibco.com/schemas/ProjectZero/Recources/Schemas/SharedProcesses/WriteToFileRespons"
 	 xmlns:Header="http://www.tibco.com/schemas/ProjectZero/Recources/Schemas/Common/Header"
- 	xmlns:Response="http://www.tibco.com/schemas/ProjectZero/Recources/Schemas/Common/Response"
+	 xmlns:Response="http://www.tibco.com/schemas/ProjectZero/Recources/Schemas/Common/Response"
 	 targetNamespace="http://www.tibco.com/schemas/ProjectZero/Recources/Schemas/SharedProcesses/WriteToFileRespons"
 	 elementFormDefault="qualified"
 	 attributeFormDefault="unqualified">
@@ -14,14 +14,14 @@
 			<xs:sequence>
 				<xs:element ref="WriteToFileRequest:Body"/>
 				<xs:element ref="Header:Header"/>
-				<xs:element ref="Response:Response"/>
+				
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
 	<xs:element name="Body">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="message" type="xs:string"/>
+				<xs:element ref="Response:Response"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
